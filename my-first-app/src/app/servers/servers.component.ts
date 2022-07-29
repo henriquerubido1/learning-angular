@@ -28,8 +28,9 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!' ;
   serverName = 'Test server';
-  username = '';
-  buttonStatus = false;
+  serverCreated = false;
+  // username = '';
+  // buttonStatus = false;
 
   constructor() {
     setTimeout(() => {
@@ -41,6 +42,7 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
+    this.serverCreated = true;
     this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
   }
 
@@ -48,14 +50,14 @@ export class ServersComponent implements OnInit {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
 
-  onInputChange(): boolean {
-    if (this.username !== '') {
-     return this.buttonStatus = true;
-    }
-    return this.buttonStatus = false
-  }
+  // onInputChange(): boolean {
+  //   if (this.username !== '') {
+  //    return this.buttonStatus = true;
+  //   }
+  //   return this.buttonStatus = false
+  // }
 
-  onButtonClick() {
-    this.username = '';
-  }
+  // onButtonClick() {
+  //   this.username = '';
+  // }
 }
