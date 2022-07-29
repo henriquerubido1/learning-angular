@@ -11,10 +11,10 @@ import { Component, OnInit } from '@angular/core';
 
   // you can use template for using html in the component
   // or you can use templateUrl to load html from a file
-  template: `
-    <app-server></app-server>
-    <app-server></app-server>`,
-  // templateUrl: './servers.component.html',
+  // template: `
+  //   <app-server></app-server>
+  //   <app-server></app-server>`,
+  templateUrl: './servers.component.html',
   
   // the same thing happens for the css
   styles: [`
@@ -25,8 +25,13 @@ import { Component, OnInit } from '@angular/core';
   // styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+  allowNewServer = false;
 
-  constructor() { }
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 
   ngOnInit(): void {
   }
