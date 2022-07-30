@@ -12,9 +12,9 @@
       <p *ngIf="displayParagraph">random content</p>
       <ol>
         <li
-          *ngFor="let click of clicks"
-          [ngStyle]="click >= 5 ? {'backgroundColor': 'blue'} : {}"
-          [ngClass]="{whiteColor: click >= 5}"
+          *ngFor="let click of clicks; let i = index"
+          [ngStyle]="i >= 4 ? {'backgroundColor': 'blue'} : {}"
+          [ngClass]="{whiteColor: i >= 4}"
         >
           {{ clicks }}
         </li>
