@@ -8,7 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ServerElementComponent implements OnInit {
   // @Input() makes element accessible from
   // outside of the component
-  @Input() element: {type: string, name: string, content: string};
+  // 'srvElement' is an optional alias for
+  // the element
+  @Input('srvElement') element: {type: string, name: string, content: string};
 
   constructor() { }
 
