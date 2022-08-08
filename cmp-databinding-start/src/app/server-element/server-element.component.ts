@@ -8,6 +8,8 @@ import {
   DoCheck,
   AfterContentInit,
   AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
 } from '@angular/core';
 
 @Component({
@@ -21,7 +23,9 @@ export class ServerElementComponent implements
   OnChanges,
   DoCheck,
   AfterContentInit,
-  AfterContentChecked {
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked {
   // @Input() makes element accessible from
   // outside of the component
   // 'srvElement' is an optional alias for
@@ -52,5 +56,13 @@ export class ServerElementComponent implements
 
   ngAfterContentChecked(): void {
     console.log('ngAfterContentChecked called');
+  }
+
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit called');
+  }
+
+  ngAfterViewChecked(): void {
+    console.log('ngAfterViewChecked called');
   }
 }
