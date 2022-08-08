@@ -10,6 +10,7 @@ import {
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
+  OnDestroy,
 } from '@angular/core';
 
 @Component({
@@ -25,7 +26,8 @@ export class ServerElementComponent implements
   AfterContentInit,
   AfterContentChecked,
   AfterViewInit,
-  AfterViewChecked {
+  AfterViewChecked,
+  OnDestroy {
   // @Input() makes element accessible from
   // outside of the component
   // 'srvElement' is an optional alias for
@@ -64,5 +66,9 @@ export class ServerElementComponent implements
 
   ngAfterViewChecked(): void {
     console.log('ngAfterViewChecked called');
+  }
+
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy called');
   }
 }
