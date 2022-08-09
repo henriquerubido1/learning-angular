@@ -11,6 +11,8 @@ import {
   AfterViewInit,
   AfterViewChecked,
   OnDestroy,
+  ViewChild,
+  ElementRef,
 } from '@angular/core';
 
 @Component({
@@ -34,6 +36,7 @@ export class ServerElementComponent implements
   // the element
   @Input('srvElement') element: {type: string, name: string, content: string};
   @Input() name: string;
+  @ViewChild('header', {static:true}) header: ElementRef;
 
   constructor() {
     console.log('constructor called');
@@ -46,6 +49,8 @@ export class ServerElementComponent implements
 
   ngOnInit(): void {
     console.log('ngOnInit called');
+    console.log(this.header.nativeElement.textContent);
+    
   }
 
   ngDoCheck(): void {
@@ -62,6 +67,7 @@ export class ServerElementComponent implements
 
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit called');
+    console.log(this.header.nativeElement.textContent);
   }
 
   ngAfterViewChecked(): void {
