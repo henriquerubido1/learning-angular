@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-  onGameStarted(gameStarted: boolean) {
-    console.log(gameStarted);
-  }
+  timer = 0;
 }

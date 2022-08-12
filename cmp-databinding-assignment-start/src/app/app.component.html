@@ -13,7 +13,7 @@
         <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
       </ol>
       <app-game-control
-        (gameStarted)="onGameStarted($event)"
+        [count]="timer"
       >
       </app-game-control>
       <app-odd></app-odd>
