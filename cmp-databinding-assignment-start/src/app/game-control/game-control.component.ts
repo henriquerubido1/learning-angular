@@ -16,7 +16,6 @@ export class GameControlComponent implements OnInit {
     this.count = 0;
     setInterval(() => {
       this.count++;
-      console.log(this.count);
     }, 1000);
   }
 }
